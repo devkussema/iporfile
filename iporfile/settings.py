@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-idkr)sm#nd30r4(v+f)^$&=slt*hlc&1w#gjm5!mccx2i8ae@6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['devkussema.pythonanywhere.com']
+ALLOWED_HOSTS = ['devkussema.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'iporfile.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
