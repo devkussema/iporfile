@@ -1,0 +1,75 @@
+{% load static %}
+<div class="nav-wrapper">
+    <div class="side-navbar">
+        <div class="side-nav-menu">
+            <a class="smooth-menu" href="#home">
+                <img src={% static "assets/img/logo-icon.png" %} alt="Logo">
+            </a>
+        </div>
+        <div class="nav-toggle">
+            <img src={% static "assets/img/menu-white.svg" %} alt="Menu">
+        </div>
+        <div class="author-social">
+            <input type="checkbox" id="toggle" class="share-toggle" hidden="">
+            <label for="toggle" class="share-button">
+                <i class="fas fa-plus"></i>
+            </label>
+            <a href="#" class="share-icon facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-icon twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="share-icon instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="nav-side">
+        <div class="nav-items simple-menu">
+
+            <div class="nav-toggle"><i class="fas fa-times"></i></div>
+
+
+            <div class="nav-item dropdown">
+                <a class="smooth-menu" href="#home">Home</a>
+                <a class="dropdown-toggle" href="#"><i class="fas fa-plus"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="index-2.html">Home vCard</a></li>
+                    <li><a href="index-onepage.html">Home Onepage</a></li>
+                    <li><a href="index-light.html">Home vCard Light</a></li>
+                    <li><a href="index-light-onepage.html">Home Onepage Light</a></li>
+                    <li><a href="index-3.html">Home Two vCard</a></li>
+                    <li><a href="index-2-onepage.html">Home Two Onepage</a></li>
+                    <li><a href="index-2-light.html">Home Two vCard Light</a></li>
+                    <li><a href="index-2-onepage-light.html">Home Two Onepage Light</a></li>
+                </ul>
+                <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-item">
+                <a class="smooth-menu" href="#services">Serviços</a>
+                <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-item">
+                <a class="smooth-menu" href="#about">Sobre</a>
+                <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-item">
+                <a class="smooth-menu" href="#portfolio">Portfólio</a>
+                <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-item">
+                <a class="smooth-menu" href="#blog">Blog</a>
+                <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-item">
+                <a class="smooth-menu" href="#contact">Contacto</a>
+                <div class="nav-item-wrapper"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
