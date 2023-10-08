@@ -39,7 +39,25 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
+    'rest_framework',
+    'django_summernote',
 ]
+
+SUMMERNOTE_CONFIG = {
+    'height': 360,
+    #'width': '100%',
+    'toolbar': [
+        ['style', ['style']],
+        ['font', ['bold', 'italic', 'underline', 'clear']],
+        ['fontname', ['fontname']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture', 'video']],
+        ['view', ['fullscreen', 'codeview']],
+    ],
+    'upload_to': 'uploads/',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

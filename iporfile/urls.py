@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('portfolio/', include('portfolio.urls')),
+    path('summernote/', include('django_summernote.urls')),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # Servir arquivos estáticos durante o desenvolvimento
 if settings.DEBUG:

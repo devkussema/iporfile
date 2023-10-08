@@ -1,4 +1,5 @@
 from django.db import models
+from django_summernote.fields import SummernoteTextField
 
 class Categoria(models.Model):
     nome = models.CharField(max_length=100)
@@ -17,7 +18,7 @@ class Projeto(models.Model):
     imagem = models.ImageField(upload_to='imagens/')
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True)
     pequena_descricao = models.CharField(max_length=200, default='')
-    conteudo = models.TextField()
+    conteudo = SummernoteTextField()
     cliente = models.ForeignKey(Cliente, on_delete=models.SET_NULL, null=True)
     tipo_projeto = models.CharField(max_length=100, null=True, blank=True)
     data = models.DateField(null=True, blank=True)
