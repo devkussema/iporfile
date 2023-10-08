@@ -40,12 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio',
     'rest_framework',
-    'django_summernote',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
 SUMMERNOTE_CONFIG = {
     'height': 360,
-    #'width': '100%',
+    'width': 600,
+    'upload_to': 'uploads/',
     'toolbar': [
         ['style', ['style']],
         ['font', ['bold', 'italic', 'underline', 'clear']],
@@ -56,7 +59,6 @@ SUMMERNOTE_CONFIG = {
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview']],
     ],
-    'upload_to': 'uploads/',
 }
 
 MIDDLEWARE = [
