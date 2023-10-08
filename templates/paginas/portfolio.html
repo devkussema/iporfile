@@ -6,8 +6,8 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="heading-left">
-                        <h4 class="sub-title">Recent Work</h4>
-                        <h2 class="title">Showcasing My Projects</h2>
+                        <h4 class="sub-title">Trabalhos recentes</h4>
+                        <h2 class="title">Veja os meus Projetos</h2>
                     </div>
                 </div>
             </div>
@@ -16,22 +16,29 @@
         <div class="container">
             <div class="row mt--50">
                 <!-- Single Item -->
-                <div class="col-lg-6 item-center">
-                    <div class="portfolio-style-one">
-                        <div class="thumb-zoom">
-                            <img src={% static "assets/img/portfolio/5.jpg" %} alt="Image Not Found">
-                        </div>
-                        <div class="pf-item-info">
-                            <div class="content-info">
-                                <span>Marketing</span>
-                                <h2><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal">Photo shooting and editing</a></h2>
+                {% for projeto in projetos %}
+                    <div class="col-lg-6 item-center">
+                        <div class="portfolio-style-one">
+                            <div class="thumb-zoom">
+                                <img src="/media/{{ projeto.imagem }}" alt="Imagem não encontrada">
+                            </div>
+                            <div class="pf-item-info">
+                                <div class="content-info">
+                                    <span>{{ projeto.categoria }}</span>
+                                    <h2>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal">
+                                            {{ projeto.titulo}}
+                                        </a>
+                                    </h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                {% endfor %}
+
                 <!-- End Single Item -->
                 <!-- Single Item -->
-                <div class="col-lg-6 item-center">
+                <!--<div class="col-lg-6 item-center">
                     <div class="portfolio-style-one">
                         <div class="thumb-zoom">
                             <img src={% static "assets/img/portfolio/2.jpg" %} alt="Image Not Found">
@@ -43,10 +50,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- End Single Item -->
                 <!-- Single Item -->
-                <div class="col-lg-6 item-center">
+                <!--<div class="col-lg-6 item-center">
                     <div class="portfolio-style-one">
                         <div class="thumb-zoom">
                             <img src={% static "assets/img/portfolio/3.jpg" %} alt="Image Not Found">
@@ -58,10 +65,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- End Single Item -->
                 <!-- Single Item -->
-                <div class="col-lg-6 item-center">
+                <!--<div class="col-lg-6 item-center">
                     <div class="portfolio-style-one">
                         <div class="thumb-zoom">
                             <img src={% static "assets/img/portfolio/4.jpg" %} alt="Image Not Found">
@@ -73,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- End Single Item -->
             </div>
         </div>
